@@ -1,0 +1,509 @@
+/* App.css - Modern styling for Fresh Farm Produce SPA */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 0 0 2rem 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.farm-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #2e7d32;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: #2e7d32;
+}
+
+.nav-links a:hover:after {
+  width: 100%;
+}
+
+/* Index Page Styles */
+.index-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://via.placeholder.com/1200x400?text=Fresh+Farm+Produce');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.form-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-section > p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group:nth-last-child(2),
+.form-group:last-child {
+  grid-column: span 2;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #d32f2f;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.submit-button {
+  grid-column: span 2;
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #1b5e20;
+}
+
+.success-message {
+  background-color: rgba(46, 125, 50, 0.1);
+  border-left: 4px solid #2e7d32;
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.success-message h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+/* Farm Sales Page Styles */
+.farm-sales-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.farm-sales-page h1 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.products-section {
+  margin-bottom: 3rem;
+}
+
+.products-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.products-section h2:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #2e7d32;
+  bottom: 0;
+  left: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card.highlighted {
+  border: 2px solid #2e7d32;
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.price {
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.product-info button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-info button:hover {
+  background-color: #1b5e20;
+}
+
+.user-data-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.user-data-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.user-data-section h2:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #2e7d32;
+  bottom: 0;
+  left: 0;
+}
+
+.user-data-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.user-data-item {
+  margin-bottom: 1rem;
+}
+
+.user-data-item strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.user-message {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.recommended-products h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-data-message h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.no-data-message p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #1b5e20;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #2e7d32;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-section p {
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: #bbb;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #2e7d32;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #222;
+  color: #999;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group:nth-last-child(2),
+  .form-group:last-child {
+    grid-column: span 1;
+  }
+  
+  .submit-button {
+    grid-column: span 1;
+  }
+}
